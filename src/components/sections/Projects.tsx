@@ -47,7 +47,7 @@ export default function Projects() {
 
                 <Link
                   href={`/projects/${project.slug}`}
-                  className="mt-5 inline-flex items-center gap-2 text-sm transition-colors hover:text-[var(--color-accent)]"
+                  className="mt-6 inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-[var(--accent)] bg-[var(--surface)] px-5 py-3 text-xs font-semibold tracking-wide text-[var(--accent)] transition-colors hover:border-[var(--accent-hover)] hover:bg-[var(--accent)] hover:text-[var(--background)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]"
                 >
                   Explore project <span aria-hidden="true">↗</span>
                 </Link>

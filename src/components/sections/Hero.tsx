@@ -80,7 +80,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-7">
             <a
               href="#work"
-              className="inline-flex items-center gap-3 bg-[#A5C68A] px-6 py-4 text-xs font-semibold tracking-wider text-[#111315] transition-colors hover:bg-[#B8D39F]"
+              className=" inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-[var(--accent)] bg-[var(--accent)] px-6 py-4 text-xs font-semibold tracking-wider text-[var(--background)] transition-colors hover:border-[var(--accent-hover)] hover:bg-[var(--accent-hover)] hover:text-[var(--background)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)]"
             >
               EXPLORE MY WORK
               <span aria-hidden="true">↗</span>
