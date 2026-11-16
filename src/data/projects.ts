@@ -12,12 +12,33 @@ export type Project = {
 export const projects: Project[] = [
   {
     number: '01',
+    title: 'Interactive Coding Practice Platform',
+    category: 'Full-stack Java application',
+    description:
+      'A coding practice platform where users can solve programming problems, write and execute Java solutions, submit code against test cases, and track their progress.',
+    contribution:
+      'Designed and developed the platform, including its backend architecture, authentication, coding workflow, asynchronous execution design, and persistent virtual workspace for algorithm dry-runs and notes.',
+    technologies: [
+      'Java 21',
+      'Spring Boot',
+      'Spring Security',
+      'PostgreSQL',
+      'RabbitMQ',
+      'Redis',
+      'Docker',
+      'WebSockets',
+    ],
+    slug: 'online-code-editor',
+    status: 'In development',
+  },
+  {
+    number: '02',
     title: 'Pharma ComplaintAI',
     category: 'AI-powered complaint management',
     description:
-      'A complaint management platform for pharmaceutical quality teams, designed to turn natural-language complaints and PDF documents into structured, actionable records.',
+      'An AI-assisted platform that transforms pharmaceutical complaints and PDF documents into structured records with risk assessment.',
     contribution:
-      'Built complaint extraction, risk assessment, and correction workflows using an agent-based pipeline with structured outputs and audit tracking.',
+      'Built complaint extraction, risk assessment, correction workflows, and audit tracking using an agent-based processing pipeline.',
     technologies: [
       'React',
       'Redux Toolkit',
@@ -28,22 +49,6 @@ export const projects: Project[] = [
     ],
     slug: 'pharma-complaint-ai',
     status: 'Completed',
-  },
-  {
-    number: '02',
-    title: 'Online Code Editor',
-    category: 'Developer tools',
-    description:
-      'An online coding platform being extended with a virtual workspace, giving users a more persistent environment to work on their code.',
-    contribution:
-      'Working on the virtual workspace feature, with a focus on workspace persistence and reliable background processing.',
-    technologies: [
-      'Virtual workspace',
-      'Workspace persistence',
-      'Background processing',
-    ],
-    slug: 'online-code-editor',
-    status: 'In development',
   },
   {
     number: '03',
@@ -63,7 +68,7 @@ export const projects: Project[] = [
       'WebRTC',
       'MediaPipe',
     ],
-    slug: 'gesturelearn',
-    status: 'In development',
+    slug: 'gesture-learn',
+    status: 'Completed',
   },
 ];

@@ -13,7 +13,13 @@ const focusAreas = [
   'Intelligent systems',
 ];
 
-const technologies = ['Java', 'React', 'Node.js', 'Python', 'PostgreSQL'];
+const technologies = [
+  'Java',
+  'Python',
+  'PostgreSQL',
+  'JavaScript',
+  'Spring Boot',
+];
 
 export default function Hero() {
   return (
@@ -82,10 +88,11 @@ export default function Hero() {
 
             <a
               href="/resume.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="border-b border-[#777E7B] pb-2 text-xs tracking-wider text-[#F1EFE8] transition-colors hover:border-[#A5C68A] hover:text-[#A5C68A]"
             >
-              DOWNLOAD RESUME ↗
+              VIEW RESUME ↗
             </a>
           </div>
 
@@ -111,7 +118,10 @@ export default function Hero() {
               <p className="text-[10px] tracking-wider text-[#777E7B]">
                 CURRENT FOCUS
               </p>
-              <p className="mt-2 text-sm text-[#F1EFE8]">Java & Backend</p>
+              <p className="mt-2 text-sm text-[#F1EFE8]">
+                {' '}
+                Backend Development
+              </p>
             </div>
           </div>
         </div>
@@ -152,19 +162,18 @@ export default function Hero() {
           </p>
         </aside>
       </div>
-
       {/* Scroll indicator */}
       <div className="mt-16 flex items-center justify-between border-t border-[#393C3C] pt-5">
-        <p className="text-[10px] tracking-[0.15em] text-[#777E7B]">
+        {/* <p className="text-[10px] tracking-[0.15em] text-[#777E7B]">
           PORTFOLIO / 2026
-        </p>
+        </p> */}
 
-        <a
+        {/* <a
           href="#work"
           className="text-[10px] tracking-[0.15em] text-[#A6AAA8] transition-colors hover:text-[#A5C68A]"
         >
           SCROLL TO EXPLORE ↓
-        </a>
+        </a> */}
       </div>
     </section>
   );

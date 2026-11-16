@@ -1,30 +1,31 @@
 'use client';
 
 import { useState } from 'react';
+// import ThemeToggle from './ThemeToggle';
 
 const links = [
-  { label: 'WORK', href: '#work' },
-  { label: 'ABOUT', href: '#about' },
-  { label: 'ENGINEERING', href: '#engineering' },
-  { label: 'CONTACT', href: '#contact' },
+  { label: 'WORK', href: '/#work' },
+  { label: 'ABOUT', href: '/#about' },
+  { label: 'ENGINEERING', href: '/#engineering' },
+  { label: 'CONTACT', href: '/#contact' },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#393C3C] bg-[#111315]/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--background)]/95 backdrop-blur-md">
       <nav
         className="container flex min-h-[76px] items-center justify-between"
         aria-label="Main navigation"
       >
         {/* Brand */}
         <a
-          href="#home"
+          href="/#home"
           className="font-display text-2xl tracking-tight"
           aria-label="Nihal O V. - Home"
         >
-          Nihal<span className="text-[#A5C68A]">.</span>OV
+          Nihal<span className="text-[var(--accent)]">.</span>OV
         </a>
 
         {/* Desktop navigation */}
@@ -33,17 +34,19 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[11px] tracking-[0.16em] text-[#A6AAA8] transition-colors hover:text-[#A5C68A]"
+              className="text-[11px] tracking-[0.16em] text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]"
             >
               {link.label}
             </a>
           ))}
+
+          {/* <ThemeToggle /> */}
         </div>
 
         {/* Desktop contact action */}
         <a
           href="mailto:nihalov89@gmail.com"
-          className="hidden border border-[#A5C68A] px-5 py-2 text-xs tracking-wider text-[#A5C68A] transition-colors hover:bg-[#A5C68A] hover:text-[#111315] md:inline-flex"
+          className="hidden border border-[var(--accent)] px-5 py-2 text-xs tracking-wider text-[var(--accent)] transition-colors hover:bg-[var(--accent)] hover:text-[var(--background)] md:inline-flex"
         >
           LET'S TALK ↗
         </a>
@@ -51,7 +54,7 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <button
           type="button"
-          className="text-sm tracking-widest text-[#F1EFE8] md:hidden"
+          className="text-sm tracking-widest text-[var(--foreground)] md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
@@ -65,7 +68,7 @@ export default function Navbar() {
       {menuOpen && (
         <div
           id="mobile-navigation"
-          className="border-t border-[#393C3C] bg-[#111315] px-5 py-6 md:hidden"
+          className="border-t border-[var(--border)] bg-[var(--background)] px-5 py-6 md:hidden"
         >
           <div className="container flex flex-col gap-6">
             {links.map((link, index) => (
@@ -73,16 +76,20 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="flex items-center gap-4 text-sm tracking-widest text-[#F1EFE8] hover:text-[#A5C68A]"
+                className="flex items-center gap-4 text-sm tracking-widest text-[var(--foreground)] hover:text-[var(--accent)]"
               >
-                <span className="text-xs text-[#777E7B]">0{index + 1}</span>
+                <span className="text-xs text-[var(--text-secondary)]">
+                  0{index + 1}
+                </span>
                 {link.label}
               </a>
             ))}
 
+            {/* <ThemeToggle /> */}
+
             <a
               href="mailto:nihalov89@gmail.com"
-              className="mt-2 text-sm text-[#A5C68A]"
+              className="mt-2 text-sm text-[var(--accent)]"
               onClick={() => setMenuOpen(false)}
             >
               LET'S TALK ↗
