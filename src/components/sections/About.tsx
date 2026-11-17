@@ -15,7 +15,7 @@ export default function About() {
 
           <div>
             <p className="text-xl leading-9">
-              I'm Nihal, a software developer interested in building software
+              I&apos;m Nihal, a software developer interested in building software
               applications and understanding the engineering behind them.
             </p>
 

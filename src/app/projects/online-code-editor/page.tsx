@@ -246,7 +246,7 @@ export default function OnlineCodeEditorPage() {
                 <h3 className="font-serif text-2xl">Asynchronous processing</h3>
                 <p className="mt-3 text-sm leading-8 text-[var(--color-muted)]">
                   Background job processing separates time-consuming operations
-                  from the application's request-response flow. RabbitMQ is used
+                  from the application&apos;s request-response flow. RabbitMQ is used
                   for message-based communication between processing components.
                 </p>
               </div>

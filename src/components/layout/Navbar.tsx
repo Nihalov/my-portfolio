@@ -1,7 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 // import ThemeToggle from './ThemeToggle';
+
+const contactUrl =
+  'https://mail.google.com/mail/?view=cm&fs=1&to=nihalov89%40gmail.com';
 
 const links = [
   { label: 'WORK', href: '/#work' },
@@ -20,24 +24,24 @@ export default function Navbar() {
         aria-label="Main navigation"
       >
         {/* Brand */}
-        <a
+        <Link
           href="/#home"
           className="font-display text-2xl tracking-tight"
           aria-label="Nihal O V. - Home"
         >
           Nihal<span className="text-[var(--accent)]">.</span>OV
-        </a>
+        </Link>
 
         {/* Desktop navigation */}
         <div className="hidden items-center gap-9 md:flex">
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-[11px] tracking-[0.16em] text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
 
           {/* <ThemeToggle /> */}
@@ -45,10 +49,12 @@ export default function Navbar() {
 
         {/* Desktop contact action */}
         <a
-          href="mailto:nihalov89@gmail.com"
+          href={contactUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden border border-[var(--accent)] px-5 py-2 text-xs tracking-wider text-[var(--accent)] transition-colors hover:bg-[var(--accent)] hover:text-[var(--background)] md:inline-flex"
         >
-          LET'S TALK ↗
+          LET&apos;S TALK ↗
         </a>
 
         {/* Mobile menu button */}
@@ -72,7 +78,7 @@ export default function Navbar() {
         >
           <div className="container flex flex-col gap-6">
             {links.map((link, index) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
@@ -82,17 +88,19 @@ export default function Navbar() {
                   0{index + 1}
                 </span>
                 {link.label}
-              </a>
+              </Link>
             ))}
 
             {/* <ThemeToggle /> */}
 
             <a
-              href="mailto:nihalov89@gmail.com"
+              href={contactUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 text-sm text-[var(--accent)]"
               onClick={() => setMenuOpen(false)}
             >
-              LET'S TALK ↗
+              LET&apos;S TALK ↗
             </a>
           </div>
         </div>

@@ -64,15 +64,15 @@ export default function Hero() {
           </div>
 
           <h1 className="max-w-4xl text-5xl leading-[1.08] tracking-tight sm:text-6xl md:text-7xl xl:text-[84px]">
-            I build software
+            I design
             <br />
-            that solves
+            I build
             <br />
-            <span className="italic text-[#A5C68A]">real problems.</span>
+            <span className="italic text-[#A5C68A]">I ship Software.</span>
           </h1>
 
           <p className="mt-9 max-w-xl text-base leading-8 text-[#A6AAA8]">
-            I'm Nihal, an MCA graduate and software developer interested in
+            I&apos;m Nihal, an MCA graduate and software developer interested in
             building practical applications, thoughtful backend systems and
             intelligent software experiences.
           </p>

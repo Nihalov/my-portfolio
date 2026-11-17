@@ -33,7 +33,7 @@ export default function Contact() {
             </h2>
 
             <p className="mt-6 max-w-md text-sm leading-8 text-[var(--color-muted)]">
-              I'm open to software development opportunities, interesting
+              I&apos;m open to software development opportunities, interesting
               projects, and conversations about building useful software.
             </p>
 
