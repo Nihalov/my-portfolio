@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react';
+
 const principles = [
   {
     number: '01',
@@ -22,22 +24,27 @@ const principles = [
 const skillGroups = [
   {
     category: 'Languages',
+    color: '#a5c68a',
     skills: ['Java', 'Python', 'JavaScript', 'SQL'],
   },
   {
     category: 'Backend',
+    color: '#8cb9d6',
     skills: ['Spring Boot', 'FastAPI', 'REST APIs'],
   },
   {
     category: 'Frontend',
-    skills: ['React', 'HTML', 'CSS', 'Booststrap'],
+    color: '#d6b97e',
+    skills: ['React', 'HTML', 'CSS', 'Bootstrap'],
   },
   {
     category: 'Databases & Tools',
+    color: '#b7a2d8',
     skills: ['PostgreSQL', 'MongoDB', 'Docker', 'Git', 'RabbitMQ', 'Redis'],
   },
   {
     category: 'Concepts',
+    color: '#83bfb1',
     skills: [
       'OOPS',
       'DBMS',
@@ -82,30 +89,48 @@ export default function Engineering() {
             ))}
           </div>
 
-          <div className="md:pl-10">
-            <p className="mb-6 text-sm uppercase tracking-widest text-[var(--color-muted)]">
-              Technologies I work with
-            </p>
+          <aside aria-labelledby="toolkit-heading" className="md:pl-6 lg:pl-10">
+            <div className="mb-6 flex items-center gap-3">
+              <span aria-hidden="true" className="h-5 w-0.5 bg-[var(--accent)]" />
+              <h3
+                id="toolkit-heading"
+                className="font-sans text-sm font-medium uppercase tracking-widest text-[var(--foreground)]"
+              >
+                Technologies I work with
+              </h3>
+            </div>
 
-            <div className="space-y-7">
+            <div className="grid gap-3">
               {skillGroups.map((group) => (
-                <div
+                <section
                   key={group.category}
-                  className="border-t border-[var(--color-border)] pt-4"
+                  style={{ '--skill-accent': group.color } as CSSProperties}
+                  className="rounded-lg border border-[var(--skill-accent)]/20 bg-[var(--skill-accent)]/5 p-5"
                 >
-                  <h3 className="mb-4 text-sm font-medium">{group.category}</h3>
-
-                  <div className="flex flex-wrap gap-2">
-                    {group.skills.map((skill) => (
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <h4 className="flex items-center gap-2.5 font-sans text-sm font-semibold text-[var(--skill-accent)]">
                       <span
+                        aria-hidden="true"
+                        className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--skill-accent)]"
+                      />
+                      {group.category}
+                    </h4>
+                    <span className="shrink-0 text-[10px] uppercase tracking-wider text-[var(--text-secondary)]">
+                      {group.skills.length} skills
+                    </span>
+                  </div>
+
+                  <ul className="flex flex-wrap gap-2">
+                    {group.skills.map((skill) => (
+                      <li
                         key={skill}
-                        className="border border-[var(--color-border)] px-3 py-2 text-xs text-[var(--color-muted)]"
+                        className="rounded border border-[var(--skill-accent)]/15 bg-[var(--background)]/60 px-3 py-2 text-xs leading-5 text-[var(--foreground)]"
                       >
                         {skill}
-                      </span>
+                      </li>
                     ))}
-                  </div>
-                </div>
+                  </ul>
+                </section>
               ))}
             </div>
 
@@ -113,7 +138,7 @@ export default function Engineering() {
               My toolkit continues to evolve through hands-on projects and
               continuous learning.
             </p>
-          </div>
+          </aside>
         </div>
       </div>
     </section>
